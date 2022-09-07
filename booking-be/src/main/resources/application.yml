@@ -1,0 +1,20 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 324300983749-hr7l9qh2ad15qucfm1sps7vm9hq5r3l3.apps.googleusercontent.com
+            client-secret: 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
+            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
+            scope:
+              - email
+              - profile
+              
+
+app:
+  tokenSecret: ABCDEF-is93z_YXAAauPHgklE7vqGHIJKL
+  tokenExpirationMsec: 864000000
+  authorizedRedirectUris:
+    - http://localhost:3000/oauth2/redirect
+    - http://ec2-65-1-4-68.ap-south-1.compute.amazonaws.com/oauth2/redirect
